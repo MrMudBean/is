@@ -1,9 +1,5 @@
 /**
  * 检测 Javascript 数据类型工具之: number
- *
- * @packageDocumentation
- * @module @a-type-of-js/number
- * @license MIT
  */
 
 import { typeOf } from './typeOf';
@@ -22,7 +18,6 @@ import { typeOf } from './typeOf';
  * isNumber(123); // true
  *
  * isNumber('123'); // false
- *
  * ```
  */
 export function isNumber(input: any): input is number {
@@ -65,7 +60,6 @@ export function isBigInt(input: any): input is bigint {
  * isNaN(NaN); // true
  *
  * isNaN('123'); // false
- *
  * ```
  */
 export function isNaN(input: any): input is typeof NaN {
@@ -91,11 +85,7 @@ export function isNaN(input: any): input is typeof NaN {
  * isPositiveInteger(Infinity); // false
  * isPositiveInteger('123'); // false
  * isPositiveInteger(NaN); // false
- *
- *
  * ```
- *
- *
  */
 export function isPositiveInteger(input: any): input is number {
   return Number.isInteger(input) && isNumber(input) && input > 0;
@@ -121,11 +111,7 @@ export function isPositiveInteger(input: any): input is number {
  * isPositiveInteger(Infinity); // false
  * isPositiveInteger('123'); // false
  * isPositiveInteger(NaN); // false
- *
- *
  * ```
- *
- *
  */
 export function isNegativeInteger(input: any): input is number {
   return Number.isInteger(input) && isNumber(input) && input < 0;
@@ -151,10 +137,7 @@ export function isNegativeInteger(input: any): input is number {
  * isZero(Infinity); // false
  * isZero('123'); // false
  * isZero(NaN); // false
- *
- *
  * ```
- *
  */
 export function isZero(input: any): input is 0 {
   return input === 0;

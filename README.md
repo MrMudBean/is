@@ -37,8 +37,6 @@ doSomething(1); // 1.00
 
 ### 向 `as` 说 'no'
 
-en，且当是脱裤子放屁吧
-
 ```ts
 import { isType } from 'a-type-of-js';
 
@@ -129,7 +127,3 @@ function doSomething(value: string | number | boolean | ) {
 - `isTypeError` type 错误
 - `isURIError` uri 错误
 - `isAggregateError` aggregate 错误
-
-## 文档地址
-
-参看 [https://earthnut.dev/a-type-of-js/](https://earthnut.dev/npm/a-type-of-js/)

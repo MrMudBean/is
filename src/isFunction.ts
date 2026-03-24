@@ -1,9 +1,5 @@
 /**
  * 检测 Javascript 数据类型工具之: function
- *
- * @packageDocumentation
- * @module @a-type-of-js/function
- * @license MIT
  */
 import { typeOf } from './typeOf';
 

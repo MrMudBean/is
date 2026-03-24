@@ -1,9 +1,5 @@
 /**
  * 检测 Javascript 数据类型工具之: error
- *
- * @packageDocumentation
- * @module @a-type-of-js/error
- * @license MIT
  */
 import { typeOf } from './typeOf';
 
@@ -16,15 +12,19 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- *   import { isError } from 'a-type-of-js';
+ * import { isError } from 'a-type-of-js';
  *
- *   console.log(isError(new Error('test'))); // true
+ * console.log(isError(new Error('test'))); // true
  *
- *   console.log(isError(new EvalError('test'))); // false (类型不符)
- *   console.log(isError(new RangeError('test'))); // false  (类型不符)
- *   console.log(isError(new ReferenceError('test'))); // false (类型不符)
+ * // false (类型不符)
+ * console.log(isError(new EvalError('test')));
+ * // false  (类型不符)
+ * console.log(isError(new RangeError('test')));
+ * // false (类型不符)
+ * console.log(isError(new ReferenceError('test')));
  *
- *   console.log(isError({ message: 'test' })); // false (类型不符)
+ * // false (类型不符)
+ * console.log(isError({ message: 'test' }));
  * ```
  *
  *
@@ -46,13 +46,16 @@ export function isError(input: any): input is Error {
  *
  * console.log(isEvalError(new EvalError('test'))); // true
  *
- * console.log(isEvalError(new Error('test'))); // false (类型非 EvalError)
- * console.log(isEvalError(new TypeError('test'))); // false (类型非 EvalError)
- * console.log(isEvalError(new RangeError('test'))); // false (类型非 EvalError)
+ * // false (类型非 EvalError)
+ * console.log(isEvalError(new Error('test')));
+ * // false (类型非 EvalError)
+ * console.log(isEvalError(new TypeError('test')));
+ * // false (类型非 EvalError)
+ * console.log(isEvalError(new RangeError('test')));
  *
- * console.log(isEvalError({ message: 'test' })); // false (类型非 EvalError)
+ * // false (类型非 EvalError)
+ * console.log(isEvalError({ message: 'test' }));
  * ```
- *
  */
 export function isEvalError(input: any): input is EvalError {
   return typeOf(input) === 'evalerror';
@@ -67,17 +70,20 @@ export function isEvalError(input: any): input is EvalError {
  * @example
  *
  * ```ts
- *   import { isRangeError } from 'a-type-of-js';
+ * import { isRangeError } from 'a-type-of-js';
  *
- *   console.log(isRangeError(new RangeError('test'))); // true
+ * console.log(isRangeError(new RangeError('test'))); // true
  *
- *   console.log(isRangeError(new Error('test'))); // false (类型非 RangeError
- *   console.log(isRangeError(new TypeError('test'))); // false (类型非 RangeError)
- *   console.log(isRangeError(new SyntaxError('test'))); // false (类型非 RangeError)
+ * // false (类型非 RangeError
+ * console.log(isRangeError(new Error('test')));
+ * // false (类型非 RangeError)
+ * console.log(isRangeError(new TypeError('test')));
+ * // false (类型非 RangeError)
+ * console.log(isRangeError(new SyntaxError('test')));
  *
- *   console.log(isRangeError('test')); // false (类型非 RangeError)
+ * // false (类型非 RangeError)
+ * console.log(isRangeError('test'));
  * ```
- *
  */
 export function isRangeError(input: any): input is RangeError {
   return typeOf(input) === 'rangeerror';
@@ -92,16 +98,19 @@ export function isRangeError(input: any): input is RangeError {
  * @example
  *
  * ```ts
- *   import { isReferenceError } from 'a-type-of-js';
+ * import { isReferenceError } from 'a-type-of-js';
  *
- *   console.log(isReferenceError(new ReferenceError('test'))); // true
+ * console.log(isReferenceError(new ReferenceError('test'))); // true
  *
- *   console.log(isReferenceError(new Error('test'))); // false (类型非 ReferenceError)
- *   console.log(isReferenceError(new TypeError('test'))); // false (类型非 ReferenceError)
- *   console.log(isReferenceError(new SyntaxError('test'))); // false (类型非 ReferenceError)
+ * // false (类型非 ReferenceError)
+ * console.log(isReferenceError(new Error('test')));
+ * // false (类型非 ReferenceError)
+ * console.log(isReferenceError(new TypeError('test')));
+ * // false (类型非 ReferenceError)
+ * console.log(isReferenceError(new SyntaxError('test')));
  *
- *   console.log(isReferenceError('test'); // false (类型非 ReferenceError)
- *
+ * // false (类型非 ReferenceError)
+ * console.log(isReferenceError('test');
  * ```
  */
 export function isReferenceError(input: any): input is ReferenceError {
@@ -118,18 +127,20 @@ export function isReferenceError(input: any): input is ReferenceError {
  * @example
  *
  * ```ts
- *   import { isSyntaxError } from 'a-type-of-js';
+ * import { isSyntaxError } from 'a-type-of-js';
  *
- *   console.log(isSyntaxError(new SyntaxError('test'))); // true
+ * console.log(isSyntaxError(new SyntaxError('test'))); // true
  *
- *   console.log(isSyntaxError(new Error('test'))); // false (类型非 SyntaxError)
- *   console.log(isSyntaxError(new TypeError('test'))); // false (类型非 SyntaxError)
- *   console.log(isSyntaxError(new ReferenceError('test'))); // false (类型非 SyntaxError)
+ * // false (类型非 SyntaxError)
+ * console.log(isSyntaxError(new Error('test')));
+ * // false (类型非 SyntaxError)
+ * console.log(isSyntaxError(new TypeError('test')));
+ * // false (类型非 SyntaxError)
+ * console.log(isSyntaxError(new ReferenceError('test')));
  *
- *   console.log(isSyntaxError('test')); // false (类型非 SyntaxError)
- *
+ * // false (类型非 SyntaxError)
+ * console.log(isSyntaxError('test'));
  * ```
- *
  */
 export function isSyntaxError(input: any): input is SyntaxError {
   return typeOf(input) === 'syntaxerror';
@@ -144,17 +155,21 @@ export function isSyntaxError(input: any): input is SyntaxError {
  * @example
  *
  * ```ts
- *   import { isTypeError } from 'a-type-of-js';
+ * import { isTypeError } from 'a-type-of-js';
  *
- *   console.log(isTypeError(new TypeError('test'))); // true
+ * console.log(isTypeError(new TypeError('test'))); // true
  *
- *   console.log(isTypeError(new Error('test'))); // false (类型非 TypeError)
- *   console.log(isTypeError(new SyntaxError('test'))); // false (类型非 TypeError)
- *   console.log(isTypeError(new ReferenceError('test'))); // false (类型非 TypeError)
- *   console.log(isTypeError(new EvalError('test'))); // false (类型非 TypeError)
+ * // false (类型非 TypeError)
+ * console.log(isTypeError(new Error('test')));
+ * // false (类型非 TypeError)
+ * console.log(isTypeError(new SyntaxError('test')));
+ * // false (类型非 TypeError)
+ * console.log(isTypeError(new ReferenceError('test')));
+ * // false (类型非 TypeError)
+ * console.log(isTypeError(new EvalError('test')));
  *
- *   console.log(isTypeError('test'); // false (类型非 TypeError)
- *
+ * // false (类型非 TypeError)
+ * console.log(isTypeError('test');
  * ```
  */
 export function isTypeError(input: any): input is TypeError {
@@ -170,11 +185,11 @@ export function isTypeError(input: any): input is TypeError {
  * @example
  *
  * ```ts
- *   import { isURIError } from 'a-type-of-js';
+ * import { isURIError } from 'a-type-of-js';
  *
- *   console.log(isURIError(new URIError('test'))); // true
- *   console.log(isURIError(new Error('test'))); // false
+ * console.log(isURIError(new URIError('test'))); // true
  *
+ * console.log(isURIError(new Error('test'))); // false
  * ```
  */
 export function isURIError(input: any): input is URIError {
@@ -190,11 +205,11 @@ export function isURIError(input: any): input is URIError {
  * @example
  *
  * ```ts
- *   import { isAggregateError } from 'a-type-of-js';
+ * import { isAggregateError } from 'a-type-of-js';
  *
- *   console.log(isAggregateError(new AggregateError([]))); // true
- *   console.log(isAggregateError(new Error('test'))); // false
+ * console.log(isAggregateError(new AggregateError([]))); // true
  *
+ * console.log(isAggregateError(new Error('test'))); // false
  * ```
  */
 export function isAggregateError(input: any): input is AggregateError {

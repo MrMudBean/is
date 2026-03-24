@@ -1,9 +1,5 @@
 /**
  * 检测 Javascript 数据类型工具之: null
- *
- * @packageDocumentation
- * @module @a-type-of-js/null
- * @license MIT
  */
 
 /**

@@ -1,13 +1,8 @@
 /**
  * 检测 Javascript 数据类型工具之: boolean
- *
- * @packageDocumentation
- * @module @a-type-of-js/boolean
- * @license MIT
  */
 import { typeOf } from './typeOf';
 /**
- *
  * 当前数据类型是否为 boolean
  *
  * @param input - 待检测的数据，任意类型

@@ -1,14 +1,9 @@
 /**
  * 检测 Javascript 数据类型工具之: array
- *
- * @packageDocumentation
- * @module @a-type-of-js/array
- * @license MIT
  */
 import { typeOf } from './typeOf';
 
 /**
- *
  * 检测 `input` 是否是 `Array` 类型
  *
  * @param input - 待检测的数据，任意类型

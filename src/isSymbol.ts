@@ -1,9 +1,5 @@
 /**
  * 检测 Javascript 数据类型工具之: symbol
- *
- * @packageDocumentation
- * @module @a-type-of-js/symbol
- * @license MIT
  */
 import { typeOf } from './typeOf';
 
@@ -20,11 +16,16 @@ import { typeOf } from './typeOf';
  *
  * console.log(isSymbol(Symbol('test'))); // true
  *
- * console.log(isSymbol('test')); // false (string 非 symbol)
- * console.log(isSymbol(123)); // false (number 非 symbol)
- * console.log(isSymbol(true)); // false (boolean 非 symbol)
- * console.log(isSymbol(null)); // false (null 非 symbol)
- * console.log(isSymbol(undefined)); // false (undefined 非 symbol)
+ * // false (string 非 symbol)
+ * console.log(isSymbol('test'));
+ * // false (number 非 symbol)
+ * console.log(isSymbol(123));
+ * // false (boolean 非 symbol)
+ * console.log(isSymbol(true));
+ * // false (null 非 symbol)
+ * console.log(isSymbol(null));
+ * // false (undefined 非 symbol)
+ * console.log(isSymbol(undefined));
  * ```
  */
 export function isSymbol(input: any): input is symbol {

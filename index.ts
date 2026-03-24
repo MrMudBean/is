@@ -1,14 +1,11 @@
 export { typeOf } from './src/typeOf';
-
 export type { Typeof } from './src/types';
-
 export {
   isString,
   isRegExp,
   isEmptyString,
   isBusinessEmptyString,
 } from './src/isString';
-
 export {
   isNumber,
   isNaN,
@@ -17,11 +14,8 @@ export {
   isNegativeInteger,
   isPositiveInteger,
 } from './src/isNumber';
-
 export { isBoolean, isTrue, isFalse } from './src/isBoolean';
-
 export { isNull, isUndefined } from './src/isNull';
-
 export {
   isFunction,
   isPromise,
@@ -29,7 +23,6 @@ export {
   isGenerator,
   isGeneratorFunction,
 } from './src/isFunction';
-
 export {
   isArray,
   isEmptyArray,
@@ -48,7 +41,6 @@ export {
   isSharedArrayBuffer,
   isUint8ClampedArray,
 } from './src/isArray';
-
 export {
   isPlainObject,
   isEmptyObject,
@@ -57,9 +49,7 @@ export {
   isMap,
   isWeakMap,
 } from './src/isObject';
-
 export { isSymbol } from './src/isSymbol';
-
 export {
   isIntlCollator,
   isIntlDateTimeFormat,
@@ -68,7 +58,6 @@ export {
   isIntlLocale,
   isIntlNumberFormat,
 } from './src/intl';
-
 export {
   isError,
   isEvalError,
@@ -79,5 +68,4 @@ export {
   isURIError,
   isAggregateError,
 } from './src/error';
-
 export { isType } from './src/isType';

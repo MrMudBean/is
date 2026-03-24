@@ -1,9 +1,5 @@
 /**
  *  `input` 类型收缩
- *
- * @packageDocumentation
- * @module @a-type-of-js/isType
- * @license MIT
  */
 
 /**
@@ -20,7 +16,6 @@
  * console.log(isType<number>(1)); // true
  * console.log(isType<string>('1')); // true
  * ```
- *
  */
 export function isType<T = string>(input: any): input is T;
 
@@ -71,19 +66,17 @@ export function isType<T = string>(input: any): input is T;
  *    if (isType<BorderStyle>(border, input => isString(input))) {
  *      // 然后这里 `border` 就可以当 `BorderStyle` 使用了
  *      // 而不是每一次使用都添加上 `as BorderStyle`
- *    } else if (isType<UnilateralBorder>(border, input => isString(input.color) || isString(input.style))) {
+ *    } else if (
+ *      isType<UnilateralBorder>(border, input =>
+ *          isString(input.color) || isString(input.style))) {
  *      // 然后这里 `border` 就可以当 `UnilateralBorder` 使用了
  *      // 而不是每一次使用都添加上 `as UnilateralBorder`
  *      // 更关键的是上面的判断区域中不会报错，即 `input` 类型也是 `UnilateralBorder`
  *
+ *    }
+ *    ...
  * }
- * ...
- *
- *
- * }
- *
  * ```
- *
  */
 export function isType<T = string>(
   input: any,

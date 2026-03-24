@@ -1,9 +1,5 @@
 /**
  * 检测 Javascript 数据类型工具之: object
- *
- * @packageDocumentation
- * @module @a-type-of-js/object
- * @license MIT
  */
 import { typeOf } from './typeOf';
 
@@ -20,9 +16,12 @@ import { typeOf } from './typeOf';
  *
  * console.log(isPlainObject({})); // true
  *
- * console.log(isPlainObject([])); // false ( Array is not an plain object )
- * console.log(isPlainObject(new Date())); // false ( Date is not an plain object )
- * console.log(isPlainObject(new Map())); // false ( Map is not an plain object )
+ * // false ( Array is not an plain object )
+ * console.log(isPlainObject([]));
+ * // false ( Date is not an plain object )
+ * console.log(isPlainObject(new Date()));
+ * // false ( Map is not an plain object )
+ * console.log(isPlainObject(new Map()));
  * ```
  */
 export function isPlainObject<T extends object>(input: any): input is T {
@@ -114,11 +113,11 @@ export function isEmptyObject(input: any): input is Record<string, never> {
  * console.log(isDate(new Date(undefined))); // true
  * console.log(isDate(new Date(null))); // true
  *
- * console.log(isDate(1)); // false ( Number 不是 Date )
- * console.log(isDate('1')); // false ( String 不是 Date )
+ * // false ( Number 不是 Date )
+ * console.log(isDate(1));
+ * // false ( String 不是 Date )
+ * console.log(isDate('1'));
  * ```
- *
- *
  */
 export function isDate(input: any): input is Date {
   return typeOf(input) === 'date';
@@ -137,7 +136,8 @@ export function isDate(input: any): input is Date {
  *
  * console.log(isDataView(new DataView(new ArrayBuffer(8)))); // true
  *
- * console.log(isDataView(new ArrayBuffer(8))); // false (ArrayBuffer 不是 DataView)
+ * // false (ArrayBuffer 不是 DataView)
+ * console.log(isDataView(new ArrayBuffer(8)));
  * ```
  */
 export function isDataView<T extends ArrayBufferLike = ArrayBufferLike>(
@@ -159,10 +159,14 @@ export function isDataView<T extends ArrayBufferLike = ArrayBufferLike>(
  *
  * console.log(isMap(new Map())); // true
  *
- * console.log(isMap(new WeakMap())); // false (WeakMap 不是 Map)
- * console.log(isMap(new Set())); // false (Set 不是 Map)
- * console.log(isMap(new WeakSet())); // false (WeakSet 不是 Map)
- * console.log(isMap(new Array())); // false (Array 不是 Map)
+ * // false (WeakMap 不是 Map)
+ * console.log(isMap(new WeakMap()));
+ * // false (Set 不是 Map)
+ * console.log(isMap(new Set()));
+ * // false (WeakSet 不是 Map)
+ * console.log(isMap(new WeakSet()));
+ * // false (Array 不是 Map)
+ * console.log(isMap(new Array()));
  * ```
  */
 export function isMap<K extends string, V = any>(
@@ -184,10 +188,14 @@ export function isMap<K extends string, V = any>(
  *
  * console.log(isWeakMap(new WeakMap())); // true
  *
- * console.log(isWeakMap(new Map())); // false (Map is not WeakMap)
- * console.log(isWeakMap(new Set())); // false (Set is not WeakMap)
- * console.log(isWeakMap(new WeakSet())); // false (WeakSet is not WeakMap)
- * console.log(isWeakMap(new Array())); // false (Array is not WeakMap)
+ * // false (Map is not WeakMap)
+ * console.log(isWeakMap(new Map()));
+ * // false (Set is not WeakMap)
+ * console.log(isWeakMap(new Set()));
+ * // false (WeakSet is not WeakMap)
+ * console.log(isWeakMap(new WeakSet()));
+ * // false (Array is not WeakMap)
+ * console.log(isWeakMap(new Array()));
  * ```
  */
 export function isWeakMap(input: any): input is WeakMap<object, any> {

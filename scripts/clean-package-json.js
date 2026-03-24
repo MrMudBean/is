@@ -16,7 +16,7 @@ let packageJson = readFileToJsonSync('./package.json');
 );
 const esPrefix = 'es'; // es 前缀
 const cjsPrefix = 'cjs'; // cjs 前缀
-const dtsPrefix = '.d.ts'; // 类型文件的前缀
+const dtsPrefix = 'es/types'; // 类型文件的前缀
 // 查看当前打包 dist 文件路径
 const distParentPath = getDirectoryBy('dist', 'directory');
 // 查看当前的源码文件路径（原则上与上面值一致）
@@ -73,7 +73,7 @@ packageJson = {
   author: {
     name: '泥豆君',
     email: 'Mr.MudBean@outlook.com',
-    url: 'https://earthnut.dev',
+    url: 'https://lmssee.com',
   },
   description: 'JavaScript/TypeScript 的类型检测工具，支持 TypeScript 类型收缩',
   sideEffects: false, // 核心：开启 Tree Shaking
@@ -92,22 +92,8 @@ packageJson = {
     },
     ...exportsList,
   },
-  keywords: [
-    'a-type-of-js',
-    'Mr.MudBean',
-    'earthnut',
-    'type of js',
-    'type check',
-    'type validation',
-    'javascript type',
-    'typescript type',
-    '类型检测',
-    '类型判断',
-    '类型收缩',
-    'JS 类型',
-    'TS 类型',
-  ],
-  homepage: 'https://earthnut.dev/npm/a-type-of-js',
+  keywords: ['a-type-of-js', 'javascript type', '类型检测'],
+  homepage: 'https://github.com/MrMudBean/a-type-of-js/blob/main/README.md',
   bugs: {
     url: 'https://github.com/MrMudBean/a-type-of-js/issues',
     email: 'Mr.MudBean@outlook.com',
