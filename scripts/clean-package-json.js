@@ -2,7 +2,7 @@ import {
   pathJoin,
   readFileToJsonSync,
   getDirectoryBy,
-  writeJsonFile,
+  writeJsonFileSync,
   fileExist,
 } from 'a-node-tools';
 import { readdirSync } from 'node:fs';
@@ -82,7 +82,14 @@ packageJson = {
     node: '>=14.0.0',
   },
   license: 'MIT',
-  files: [cjsPrefix, esPrefix, dtsPrefix],
+  files: [
+    cjsPrefix,
+    esPrefix,
+    dtsPrefix,
+    'CHANGELOG.md',
+    'README.md',
+    'LICENSE',
+  ],
   exports: {
     '.': {
       import: `./${esPrefix}/index.js`,
@@ -93,7 +100,7 @@ packageJson = {
     ...exportsList,
   },
   keywords: ['a-type-of-js', 'javascript type', '类型检测'],
-  homepage: 'https://github.com/MrMudBean/a-type-of-js/blob/main/README.md',
+  homepage: 'https://npm.lmssee.com/a-type-of-js',
   bugs: {
     url: 'https://github.com/MrMudBean/a-type-of-js/issues',
     email: 'Mr.MudBean@outlook.com',
@@ -112,5 +119,5 @@ packageJson = {
   // 整理打包后 package.json 文件路径
   const distPackagePath = pathJoin(distParentPath, './dist/package.json');
   // 写入新的 packages.json 文件
-  writeJsonFile(distPackagePath, packageJson);
+  writeJsonFileSync(distPackagePath, packageJson);
 }

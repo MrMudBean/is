@@ -4,7 +4,7 @@
 import { Typeof } from './types';
 
 /**
- *  数据类型检测
+ *  ## 数据类型检测
  *
  * @param input - 待检测的数据，任意类型
  * @returns 检测数据类型的字符串表示（小写字母）

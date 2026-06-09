@@ -48,20 +48,19 @@ interface Person {
 
 function doSomething(value: string | number | boolean | ) {
 
-    /// use judgment as a type judgment
+    // 将判断用作类型判断
     if (isType<Person>(value, () => (value && value.name === 'Tom' && value.age === 18))) {
       console.log('value is Person');
       return;
     }
 
-    /// as tisType
+    /// 作为类型判定
     if (isType<string>(value)) {
       value.toLocaleUpperCase();
       return;
     }
 
-    /// use judgment
-
+    /// 使用判断力
     if (isType<boolean>(value, Boolean(value) === true )) {
       console.log('value is true');
       return;
