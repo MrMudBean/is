@@ -73,7 +73,7 @@ packageJson = {
   author: {
     name: '泥豆君',
     email: 'Mr.MudBean@outlook.com',
-    url: 'https://lmssee.com',
+    url: 'https://mudbean.cn',
   },
   description: 'JavaScript/TypeScript 的类型检测工具，支持 TypeScript 类型收缩',
   sideEffects: false, // 核心：开启 Tree Shaking
