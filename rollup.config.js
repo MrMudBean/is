@@ -2,8 +2,6 @@ import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
-import terser from '@rollup/plugin-terser';
-import cleanup from 'rollup-plugin-cleanup';
 import copy from 'rollup-plugin-copy';
 import { external } from '@qqi/rollup-external';
 
@@ -42,9 +40,9 @@ export default {
       tsconfig: 'tsconfig.json',
     }),
     // 打包压缩，自动去注释
-    terser(),
+    // terser(),
     // 去除无用代码
-    cleanup(),
+    // cleanup(),
     copy({
       targets: [
         { src: 'README.md', dest: 'dist' },

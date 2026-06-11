@@ -16,7 +16,7 @@ let packageJson = readFileToJsonSync('./package.json');
 );
 const esPrefix = 'es'; // es 前缀
 const cjsPrefix = 'cjs'; // cjs 前缀
-const dtsPrefix = 'es/types'; // 类型文件的前缀
+const dtsPrefix = 'es'; // 类型文件的前缀
 // 查看当前打包 dist 文件路径
 const distParentPath = getDirectoryBy('dist', 'directory');
 // 查看当前的源码文件路径（原则上与上面值一致）
@@ -82,14 +82,7 @@ packageJson = {
     node: '>=14.0.0',
   },
   license: 'MIT',
-  files: [
-    cjsPrefix,
-    esPrefix,
-    dtsPrefix,
-    'CHANGELOG.md',
-    'README.md',
-    'LICENSE',
-  ],
+  files: [cjsPrefix, esPrefix, 'CHANGELOG.md', 'README.md', 'LICENSE'],
   exports: {
     '.': {
       import: `./${esPrefix}/index.js`,
