@@ -4,20 +4,19 @@
 import { typeOf } from './typeOf';
 
 /**
+ * # 检测 `input` 是否是 `function` 类型
  *
- * 检测 `input` 是否是 `function` 类型
- *
- * Function classification:
- * - Ordinary functions
- * - An asynchronous function annotated by `async`
- * - Generator function annotated by `*`
+ * 函数分类：
+ * - 普通函数
+ * - 使用 `async` 标注的异步函数
+ * - 使用 `*` 标注的生成器函数
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `function` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isFunction } from 'a-type-of-js';
+ * import { isFunction } from '@mudbean/is';
  *
  * console.log(isFunction(() => {})); // true
  *
@@ -32,15 +31,14 @@ export function isFunction<T extends (...args: any[]) => void>(
 }
 
 /**
- *
- * 检测 `input` 是否是 `Promise` 类型
+ * # 检测 `input` 是否是 `Promise` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Promise` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isPromise } from 'a-type-of-js';
+ * import { isPromise } from '@mudbean/is';
  *
  * console.log(isPromise(new Promise(() => {}))); // true
  * console.log(isPromise(() => {})); // false
@@ -50,15 +48,14 @@ export function isPromise<T>(input: any): input is Promise<T> {
   return typeOf(input) === 'promise';
 }
 /**
- *
- * 检测 `input` 是否是 `AsyncFunction` 类型
+ * # 检测 `input` 是否是 `AsyncFunction` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `async function` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isAsyncFunction } from 'a-type-of-js';
+ * import { isAsyncFunction } from '@mudbean/is';
  *
  * console.log(isAsyncFunction(async () => {})); // true
  * console.log(isAsyncFunction(() => {})); // false
@@ -71,15 +68,14 @@ export function isAsyncFunction<T extends (...args: any[]) => void>(
 }
 
 /**
- *
- * 检测 `input` 是否是 `GeneratorFunction` 类型
+ * # 检测 `input` 是否是 `GeneratorFunction` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `generator function` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isGeneratorFunction } from 'a-type-of-js';
+ * import { isGeneratorFunction } from '@mudbean/is';
  *
  * console.log(isGeneratorFunction(function* () {})); // true
  * console.log(isGeneratorFunction(() => {})); // false
@@ -91,15 +87,14 @@ export function isGeneratorFunction(input: any): input is GeneratorFunction {
 }
 
 /**
- *
- * 检测 `input` 是否是 `Generator` 类型
+ * # 检测 `input` 是否是 `Generator` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Generator` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isGenerator } from 'a-type-of-js';
+ * import { isGenerator } from '@mudbean/is';
  *
  * const log = (str) => console.log(str);
  * const foo = function* () {

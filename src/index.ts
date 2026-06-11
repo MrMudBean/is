@@ -1,11 +1,11 @@
-export { typeOf } from './src/typeOf';
-export type { Typeof } from './src/types';
+export { typeOf } from './typeOf';
+export type { Typeof } from './types';
 export {
   isString,
   isRegExp,
   isEmptyString,
   isBusinessEmptyString,
-} from './src/isString';
+} from './isString';
 export {
   isNumber,
   isNaN,
@@ -13,16 +13,16 @@ export {
   isZero,
   isNegativeInteger,
   isPositiveInteger,
-} from './src/isNumber';
-export { isBoolean, isTrue, isFalse } from './src/isBoolean';
-export { isNull, isUndefined } from './src/isNull';
+} from './isNumber';
+export { isBoolean, isTrue, isFalse } from './isBoolean';
+export { isNull, isUndefined } from './isNull';
 export {
   isFunction,
   isPromise,
   isAsyncFunction,
   isGenerator,
   isGeneratorFunction,
-} from './src/isFunction';
+} from './isFunction';
 export {
   isArray,
   isEmptyArray,
@@ -40,7 +40,7 @@ export {
   isUint8Array,
   isSharedArrayBuffer,
   isUint8ClampedArray,
-} from './src/isArray';
+} from './isArray';
 export {
   isPlainObject,
   isEmptyObject,
@@ -48,8 +48,8 @@ export {
   isDataView,
   isMap,
   isWeakMap,
-} from './src/isObject';
-export { isSymbol } from './src/isSymbol';
+} from './isObject';
+export { isSymbol } from './isSymbol';
 export {
   isIntlCollator,
   isIntlDateTimeFormat,
@@ -57,7 +57,7 @@ export {
   isIntlListFormat,
   isIntlLocale,
   isIntlNumberFormat,
-} from './src/intl';
+} from './intl';
 export {
   isError,
   isEvalError,
@@ -67,5 +67,5 @@ export {
   isTypeError,
   isURIError,
   isAggregateError,
-} from './src/error';
-export { isType } from './src/isType';
+} from './error';
+export { isType } from './isType';

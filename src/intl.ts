@@ -5,15 +5,14 @@
 import { typeOf } from './typeOf';
 
 /**
- *
- * 检测 `input` 是否是 `Intl.Collator` 类型
+ * # 检测 `input` 是否是 `Intl.Collator` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Intl.Collator` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isIntlCollator } from 'a-type-of-js';
+ * import { isIntlCollator } from '@mudbean/is';
  *
  * console.log(isIntlCollator(new Intl.Collator())); // true
  *
@@ -25,8 +24,7 @@ export function isIntlCollator(input: any): input is Intl.Collator {
 }
 
 /**
- *
- * 检测 `input` 是否是 `Intl.DateTimeFormat` 类型
+ * # 检测 `input` 是否是 `Intl.DateTimeFormat` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Intl.DateTimeFormat` ，且在 Typescript 中进行类型收缩
@@ -34,7 +32,7 @@ export function isIntlCollator(input: any): input is Intl.Collator {
  * @example
  *
  * ```ts
- * import { isIntlDateTimeFormat } from 'a-type-of-js';
+ * import { isIntlDateTimeFormat } from '@mudbean/is';
  *
  * console.log(isIntlDateTimeFormat(new Intl.DateTimeFormat())); // true
  *
@@ -48,35 +46,32 @@ export function isIntlDateTimeFormat(input: any): input is Intl.DateTimeFormat {
 }
 
 /**
- *
- * 检测 `input` 是否是 `Intl.DisplayNames` 类型
+ * # 检测 `input` 是否是 `Intl.DisplayNames` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Intl.DisplayNames` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isIntlDisplayNames } from 'a-type-of-js';
+ * import { isIntlDisplayNames } from '@mudbean/is';
  *
  * console.log(isIntlDisplayNames(new Intl.DisplayNames())); // true
  *
  * console.log(isIntlDisplayNames(new Intl.Locale())); // false
  * ```
- *
  */
 export function isIntlDisplayNames(input: any): input is Intl.DisplayNames {
   return typeOf(input) === 'intl.displaynames';
 }
 /**
- *
- * 检测 `input` 是否是 `Intl.DurationFormat` 类型
+ * #检测 `input` 是否是 `Intl.DurationFormat` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Intl.DurationFormat` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isIntlDurationFormat } from 'a-type-of-js';
+ * import { isIntlDurationFormat } from '@mudbean/is';
  *
  * ```
  *
@@ -86,15 +81,15 @@ export function isIntlDisplayNames(input: any): input is Intl.DisplayNames {
 // ): input is Intl.DurationFormat {
 //   return typeOf(input) === 'intl.durationformat';
 // }
+
 /**
- *
- * 检测 `input` 是否是 `Intl.ListFormat` 类型
+ * # 检测 `input` 是否是 `Intl.ListFormat` 类型
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Intl.ListFormat` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isIntlListFormat } from 'a-type-of-js';
+ * import { isIntlListFormat } from '@mudbean/is';
  *
  * console.log(isIntlListFormat(new Intl.ListFormat())); // true
  *
@@ -109,8 +104,7 @@ export function isIntlListFormat(input: any): input is Intl.ListFormat {
 }
 
 /**
- *
- * 检测 `input` 是否是 `Intl.Locale` 类型
+ * # 检测 `input` 是否是 `Intl.Locale` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Intl.Locale` ，且在 Typescript 中进行类型收缩
@@ -118,7 +112,7 @@ export function isIntlListFormat(input: any): input is Intl.ListFormat {
  * @example
  *
  * ```ts
- * import { isIntlLocale } from 'a-type-of-js';
+ * import { isIntlLocale } from '@mudbean/is';
  *
  * console.log(isIntlLocale(new Intl.Locale())); // true
  *
@@ -130,8 +124,7 @@ export function isIntlLocale(input: any): input is Intl.Locale {
   return typeOf(input) === 'intl.locale';
 }
 /**
- *
- * 检测 `input` 是否是 `Intl.NumberFormat` 类型
+ * # 检测 `input` 是否是 `Intl.NumberFormat` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Intl.NumberFormat` ，且在 Typescript 中进行类型收缩
@@ -139,7 +132,7 @@ export function isIntlLocale(input: any): input is Intl.Locale {
  * @example
  *
  * ```ts
- * import { isIntlNumberFormat } from 'a-type-of-js';
+ * import { isIntlNumberFormat } from '@mudbean/is';
  *
  * console.log(isIntlNumberFormat(new Intl.NumberFormat())); // true
  *
@@ -148,7 +141,6 @@ export function isIntlLocale(input: any): input is Intl.Locale {
  * console.log(isIntlNumberFormat(new Date())); // false
  * console.log(isIntlNumberFormat(new Date(0))); // false
  * ```
- *
  */
 export function isIntlNumberFormat(input: any): input is Intl.NumberFormat {
   return typeOf(input) === 'intl.numberformat';

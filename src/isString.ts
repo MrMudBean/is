@@ -4,15 +4,14 @@
 import { typeOf } from './typeOf';
 
 /**
- *
- * 当前数据类型是否为 string
+ * # 当前数据类型是否为 string
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `string` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isString } from 'a-type-of-js';
+ * import { isString } from '@mudbean/is';
  *
  * console.log(isString('hello')); // true
  *
@@ -29,15 +28,14 @@ export function isString(input: any): input is string {
 }
 
 /**
- *
- * 检测 `input` 是否是 `RegExp` 类型
+ * # 检测 `input` 是否是 `RegExp` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `RegExp` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isRegExp } from 'a-type-of-js';
+ * import { isRegExp } from '@mudbean/is';
  *
  * console.log(isRegExp(/abc/)); // true
  * console.log(isRegExp(new RegExp('abc'))); // true
@@ -55,8 +53,7 @@ export function isRegExp(input: any): input is RegExp {
 }
 
 /**
- *
- * 检测 `input` 是否是（绝对）空字符串
+ * # 检测 `input` 是否是（绝对）空字符串
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `string` 且为 空字符串，且在 Typescript 中进行类型收缩
@@ -64,7 +61,7 @@ export function isRegExp(input: any): input is RegExp {
  * @example
  *
  * ```ts
- * import { isEmptyString } from 'a-type-of-js';
+ * import { isEmptyString } from '@mudbean/is';
  *
  * console.log(isEmptyString('')); // true
  * const.log(isEmptyString(new String())); // true
@@ -87,8 +84,7 @@ export function isEmptyString(input: any): input is '' {
 }
 
 /**
- *
- * 检测 `input` 是否是（业务）空字符串
+ * # 检测 `input` 是否是（业务）空字符串
  *
  * 业务空字符串：指字符串开头和结尾的空格，以及中间连续的空格，都算作空字符串
  *
@@ -97,7 +93,7 @@ export function isEmptyString(input: any): input is '' {
  * @example
  *
  * ```ts
- * import { isBusinessEmptyString } from 'a-type-of-js';
+ * import { isBusinessEmptyString } from '@mudbean/is';
  *
  * console.log(isBusinessEmptyString('')); // true
  * console.log(isBusinessEmptyString(' ')); // true

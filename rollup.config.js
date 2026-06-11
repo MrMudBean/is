@@ -9,7 +9,7 @@ import { external } from '@qqi/rollup-external';
 
 export default {
   input: {
-    index: './index.ts', // 默认：聚合导出入口
+    index: './src/index.ts', // 默认：聚合导出入口
   },
   output: [
     {

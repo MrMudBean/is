@@ -3,14 +3,14 @@
  */
 import { typeOf } from './typeOf';
 /**
- * 当前数据类型是否为 boolean
+ * # 当前数据类型是否为 boolean
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `boolean` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isBoolean } from 'a-type-of-js';
+ * import { isBoolean } from '@mudbean/is';
  *
  * console.log(isBoolean(true)); // true
  * console.log(isBoolean(false)); // true
@@ -24,15 +24,14 @@ export function isBoolean(input: any): input is boolean {
 }
 
 /**
- *
- * 当前数据类型是否为真值 true
+ * # 当前数据类型是否为真值 true
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `true` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isTrue } from 'a-type-of-js';
+ * import { isTrue } from '@mudbean/is';
  *
  * console.log(isTrue(true)); // true
  *
@@ -45,15 +44,14 @@ export function isTrue(input: any): input is true {
   return input === true;
 }
 /**
- *
- * 当前数据类型是否为真值 false
+ * # 当前数据类型是否为真值 false
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `false` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isFalse } from 'a-type-of-js';
+ * import { isFalse } from '@mudbean/is';
  *
  * console.log(isFalse(false)); // true
  *

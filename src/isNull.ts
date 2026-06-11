@@ -11,7 +11,7 @@
  * @example
  *
  * ```ts
- * import { isNull } from 'a-type-of-js';
+ * import { isNull } from '@mudbean/is';
  *
  * console.log(isNull(null)); // true
  *
@@ -32,7 +32,7 @@ export function isNull(input: any): input is null {
  * @example
  *
  * ```ts
- * import { isUndefined } from 'a-type-of-js';
+ * import { isUndefined } from '@mudbean/is';
  *
  * console.log(isUndefined(undefined)); // true
  *

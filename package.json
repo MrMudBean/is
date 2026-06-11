@@ -1,5 +1,5 @@
 {
-  "name": "a-type-of-js",
+  "name": "@mudbean/is",
   "type": "module",
   "private": true,
   "version": "2.0.2",
@@ -14,18 +14,8 @@
     "eslint": "jja cls && eslint src",
     "beautify": "pnpm run prettier",
     "prettier": "jja cls && prettier . --write",
-    "test": "lint-staged && jest --coverage",
-    "report": "echo hello || cat ./coverage/lcov.info | coveralls",
-    "coverage": "echo hello || codecov",
     "vjj": "vjj",
-    "prepublishOnly": "pjj",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "**/*.{js,ts,tsx,jex,md,mdx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "prepublishOnly": "pjj"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -37,7 +27,6 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
     "@rollup/plugin-typescript": "^12.3.0",
-    "@types/jest": "^30.0.0",
     "@types/node": "^25.5.0",
     "a-node-tools": "^4.4.2",
     "color-pen": "^3.0.0",
@@ -46,21 +35,16 @@
     "eslint-plugin-jsdoc": "^62.8.0",
     "globals": "^17.4.0",
     "gvv": "^1.0.0",
-    "husky": "^9.1.7",
-    "jest": "^30.3.0",
-    "jest-environment-jsdom": "^30.3.0",
-    "jest-junit": "^16.0.0",
     "jja": "^2.4.0",
-    "lint-staged": "^16.4.0",
     "pjj": "^1.0.5",
     "prettier": "^3.8.1",
     "rollup": "^4.60.0",
     "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-copy": "^3.5.0",
-    "ts-jest": "^29.4.6",
     "tslib": "^2.8.1",
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.57.2",
     "vjj": "^1.0.12"
-  }
+  },
+  "packageManager": "pnpm@11.5.3+sha512.7ac1c919341c213a34dc0d02afb7143c5c26ac26ee8c4782deea821b8ac64d2134a081fd8941dae6e29bbb48f58dfc2b7fbceeccc07cb2f09d219d342a4969ed"
 }

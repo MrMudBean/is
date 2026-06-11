@@ -11,7 +11,7 @@ import { basename, extname } from 'node:path';
 // 原始 package.json 内容
 let packageJson = readFileToJsonSync('./package.json');
 // 移除冗余的键
-['scripts', 'devDependencies', 'lint-staged', 'private'].forEach(
+['scripts', 'devDependencies', 'private', 'packageManager'].forEach(
   key => delete packageJson[key],
 );
 const esPrefix = 'es'; // es 前缀
@@ -50,14 +50,14 @@ for (const childrenName of srcChildrenList) {
       default: `./${esPrefix}/${childrenName}/index.js`,
       import: `./${esPrefix}/${childrenName}/index.js`,
       require: `./${cjsPrefix}/${childrenName}/index.js`,
-      types: `./${dtsPrefix}/src/${childrenName}/index.d.ts`,
+      types: `./${dtsPrefix}/${childrenName}/index.d.ts`,
     };
   } else if (childFile.isFile()) {
     exportsList[`./${childrenBaseName}`] = {
       default: `./${esPrefix}/${childrenBaseName}.js`,
       import: `./${esPrefix}/${childrenBaseName}.js`,
       require: `./${cjsPrefix}/${childrenBaseName}.js`,
-      types: `./${dtsPrefix}/src/${childrenBaseName}.d.ts`,
+      types: `./${dtsPrefix}/${childrenBaseName}.d.ts`,
     };
   } else {
     throw new Range(`${childrenName} 文件类型不符合要求`);
@@ -99,15 +99,15 @@ packageJson = {
     },
     ...exportsList,
   },
-  keywords: ['a-type-of-js', 'javascript type', '类型检测'],
-  homepage: 'https://npm.lmssee.com/a-type-of-js',
+  keywords: ['is', 'mudbean', 'typeof', 'javascript type', '类型检测'],
+  homepage: 'https://npm.lmssee.com/is',
   bugs: {
-    url: 'https://github.com/MrMudBean/a-type-of-js/issues',
+    url: 'https://github.com/MrMudBean/is/issues',
     email: 'Mr.MudBean@outlook.com',
   },
   repository: {
     type: 'git',
-    url: 'git+https://github.com/MrMudBean/a-type-of-js.git',
+    url: 'git+https://github.com/MrMudBean/is.git',
   },
   publishConfig: {
     access: 'public',

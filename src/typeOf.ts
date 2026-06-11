@@ -4,13 +4,13 @@
 import { Typeof } from './types';
 
 /**
- *  ## 数据类型检测
+ *  # 数据类型检测
  *
  * @param input - 待检测的数据，任意类型
  * @returns 检测数据类型的字符串表示（小写字母）
  * @example
  * ```ts
- * import  { typeOf } from 'a-type-of-js';
+ * import  { typeOf } from '@mudbean/is';
  *
  *  console.log(typeOf(1) === 'number'); // true
  *  console.log(typeOf('1') === 'string'); // true
@@ -47,7 +47,7 @@ export function typeOf(input: any): Typeof {
   }
 
   /**
-   * 通过 Object.prototype.toString.call(o) 判断数据类型
+   * # 通过 Object.prototype.toString.call(o) 判断数据类型
    */
   const toStringCallValue = Reflect.apply(Object.prototype.toString, input, [])
     .replace(/^.*\s(.*)]$/, '$1')

@@ -4,15 +4,14 @@
 import { typeOf } from './typeOf';
 
 /**
- *
- * 检测 `input` 是否是类型 `plain object` （自定义的对象）
+ * # 检测 `input` 是否是类型 `plain object` （自定义的对象）
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `object` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isPlainObject } from 'a-type-of-js';
+ * import { isPlainObject } from '@mudbean/is';
  *
  * console.log(isPlainObject({})); // true
  *
@@ -29,15 +28,14 @@ export function isPlainObject<T extends object>(input: any): input is T {
 }
 
 /**
- *
- * 检测 `input` 是否是否是一个没有自己私有键的对象
+ * # 检测 `input` 是否是否是一个没有自己私有键的对象
  *
  * @param input - 待检测的数据，任意类型
  * @returns 是否为空的对象。不包含任何属性，包括 Symbol 或是不可被枚举的属性
  * @example
  *
  * ```ts
- * import { isEmptyObject } from 'a-type-of-js';
+ * import { isEmptyObject } from '@mudbean/is';
  *
  * const a = new Object();
  *
@@ -96,15 +94,14 @@ export function isEmptyObject(input: any): input is Record<string, never> {
 }
 
 /**
- *
- * 检测 data 是否是  类型{@link Date}
+ * #  检测 data 是否是  类型{@link Date}
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Date` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isDate } from 'a-type-of-js';
+ * import { isDate } from '@mudbean/is';
  *
  * console.log(isDate(new Date())); // true
  * console.log(isDate(new Date(0))); // true
@@ -132,7 +129,7 @@ export function isDate(input: any): input is Date {
  * @example
  *
  * ```ts
- * import { isDataView } from 'a-type-of-js';
+ * import { isDataView } from '@mudbean/is';
  *
  * console.log(isDataView(new DataView(new ArrayBuffer(8)))); // true
  *
@@ -155,7 +152,7 @@ export function isDataView<T extends ArrayBufferLike = ArrayBufferLike>(
  * @example
  *
  * ```ts
- * import { isMap } from 'a-type-of-js';
+ * import { isMap } from '@mudbean/is';
  *
  * console.log(isMap(new Map())); // true
  *
@@ -184,7 +181,7 @@ export function isMap<K extends string, V = any>(
  * @example
  *
  * ```ts
- * import { isWeakMap } from 'a-type-of-js';
+ * import { isWeakMap } from '@mudbean/is';
  *
  * console.log(isWeakMap(new WeakMap())); // true
  *

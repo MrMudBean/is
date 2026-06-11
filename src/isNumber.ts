@@ -13,7 +13,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import { isNumber } from 'a-type-of-js';
+ * import { isNumber } from '@mudbean/is';
  *
  * isNumber(123); // true
  *
@@ -33,7 +33,7 @@ export function isNumber(input: any): input is number {
  * @example
  *
  * ```ts
- * import { isBigInt } from 'a-type-of-js';
+ * import { isBigInt } from '@mudbean/is';
  *
  * isBigInt(123n); // true
  *
@@ -55,7 +55,7 @@ export function isBigInt(input: any): input is bigint {
  * @example
  *
  * ```ts
- * import { isNaN } from 'a-type-of-js';
+ * import { isNaN } from '@mudbean/is';
  *
  * isNaN(NaN); // true
  *
@@ -74,7 +74,7 @@ export function isNaN(input: any): input is typeof NaN {
  * @example
  *
  * ```ts
- * import { isPositiveInteger } from 'a-type-of-js';
+ * import { isPositiveInteger } from '@mudbean/is';
  *
  * isPositiveInteger(123); // true
  * isPositiveInteger(1); // true
@@ -100,7 +100,7 @@ export function isPositiveInteger(input: any): input is number {
  * @example
  *
  * ```ts
- * import { isPositiveInteger } from 'a-type-of-js';
+ * import { isPositiveInteger } from '@mudbean/is';
  *
  * isPositiveInteger(-123); // true
  * isPositiveInteger(-1); // true
@@ -126,7 +126,7 @@ export function isNegativeInteger(input: any): input is number {
  * @example
  *
  * ```ts
- * import { isZero } from 'a-type-of-js';
+ * import { isZero } from '@mudbean/is';
  *
  * isZero(0); // true
  *

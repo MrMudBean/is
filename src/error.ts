@@ -4,15 +4,14 @@
 import { typeOf } from './typeOf';
 
 /**
- *
- * 检测 `input` 是否是 `Error` 类型
+ * # 检测 `input` 是否是 `Error` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Error` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isError } from 'a-type-of-js';
+ * import { isError } from '@mudbean/is';
  *
  * console.log(isError(new Error('test'))); // true
  *
@@ -26,23 +25,20 @@ import { typeOf } from './typeOf';
  * // false (类型不符)
  * console.log(isError({ message: 'test' }));
  * ```
- *
- *
  * @since 0.1.4
  */
 export function isError(input: any): input is Error {
   return typeOf(input) === 'error';
 }
 /**
- *
- * 检测 `input` 是否是 `EvalError` 类型
+ * # 检测 `input` 是否是 `EvalError` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `EvalError` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import  { isEvalError } from 'a-type-of-js';
+ * import  { isEvalError } from '@mudbean/is';
  *
  * console.log(isEvalError(new EvalError('test'))); // true
  *
@@ -62,15 +58,14 @@ export function isEvalError(input: any): input is EvalError {
 }
 
 /**
- *
- * 检测 `input 是否是 `RangeError` 类型
+ * # 检测 `input 是否是 `RangeError` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `RangeError` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isRangeError } from 'a-type-of-js';
+ * import { isRangeError } from '@mudbean/is';
  *
  * console.log(isRangeError(new RangeError('test'))); // true
  *
@@ -90,15 +85,14 @@ export function isRangeError(input: any): input is RangeError {
 }
 
 /**
- *
- * 检测 `input` 是否是 `ReferenceError` 类型
+ * # 检测 `input` 是否是 `ReferenceError` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `ReferenceError` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isReferenceError } from 'a-type-of-js';
+ * import { isReferenceError } from '@mudbean/is';
  *
  * console.log(isReferenceError(new ReferenceError('test'))); // true
  *
@@ -118,16 +112,14 @@ export function isReferenceError(input: any): input is ReferenceError {
 }
 
 /**
- *
- *
- * 检测 `input` 是否是 `SyntaxError` 类型
+ * # 检测 `input` 是否是 `SyntaxError` 类型
  *
  *  @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `SyntaxError` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isSyntaxError } from 'a-type-of-js';
+ * import { isSyntaxError } from '@mudbean/is';
  *
  * console.log(isSyntaxError(new SyntaxError('test'))); // true
  *
@@ -147,15 +139,14 @@ export function isSyntaxError(input: any): input is SyntaxError {
 }
 
 /**
- *
- * 检测 `input` 是否是 `TypeError` 类型
+ * # 检测 `input` 是否是 `TypeError` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `TypeError` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isTypeError } from 'a-type-of-js';
+ * import { isTypeError } from '@mudbean/is';
  *
  * console.log(isTypeError(new TypeError('test'))); // true
  *
@@ -177,15 +168,14 @@ export function isTypeError(input: any): input is TypeError {
 }
 
 /**
- *
- * 检测 `input` 是否是 `URIError` 类型
+ * # 检测 `input` 是否是 `URIError` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `URIError` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isURIError } from 'a-type-of-js';
+ * import { isURIError } from '@mudbean/is';
  *
  * console.log(isURIError(new URIError('test'))); // true
  *
@@ -197,15 +187,14 @@ export function isURIError(input: any): input is URIError {
 }
 
 /**
- *
- * 检测 `input` 是否是 `AggregateError` 类型
+ * # 检测 `input` 是否是 `AggregateError` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `AggregateError` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isAggregateError } from 'a-type-of-js';
+ * import { isAggregateError } from '@mudbean/is';
  *
  * console.log(isAggregateError(new AggregateError([]))); // true
  *
