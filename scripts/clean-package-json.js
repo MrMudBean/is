@@ -34,7 +34,7 @@ for (const childrenName of srcChildrenList) {
     // 剔除测试文件
     childrenName.endsWith('.test.ts') ||
     // 剔除非导出模块
-    ['testData.ts', 'types.ts'].includes(childrenName)
+    ['testData.ts', 'types.ts', 'index.ts'].includes(childrenName)
   )
     continue;
   // 文件名（不带后缀）
@@ -43,6 +43,10 @@ for (const childrenName of srcChildrenList) {
   const childPath = pathJoin(srcDirectory, childrenName);
 
   const childFile = fileExist(childPath); // 文件元数据
+  // 剔除主文件（主文件不添加到根导出但是需要添加到导出文件列表）
+  if (childrenName.endsWith('index.ts')) {
+    continue;
+  }
   if (!childFile) throw new RangeError(`${childrenName} 文件未能读取`);
   // 子文件是文件夹时以 index.xxx.js 为准
   if (childFile.isDirectory()) {

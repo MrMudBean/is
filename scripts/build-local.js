@@ -26,7 +26,10 @@ try {
 _p(cyanPen('执行打包完毕'));
 await runOtherCode({ code: 'cd dist && pnpm pack', printLog: true });
 const info = readFileToJsonSync('./dist/package.json');
-const pack = info.name + '-' + info.version + '.tgz';
+const packageName = info.name.startsWith('@')
+  ? info.name.replace(/[/]/gim, '-').replace('@', '')
+  : info.name;
+const pack = packageName + '-' + info.version + '.tgz';
 const pwd = await runOtherCode({
   code: isWindows ? 'echo %cd%' : 'pwd',
   printLog: false,
