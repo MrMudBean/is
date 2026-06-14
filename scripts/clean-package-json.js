@@ -98,7 +98,7 @@ packageJson = {
   exports: {
     '.': {
       import: {
-        require: `./${cjsPrefix}/index.js`,
+        default: `./${esPrefix}/index.js`,
         types: `./${dtsPrefix}/index.d.ts`,
       },
       require: {
