@@ -1,8 +1,8 @@
 {
   "name": "@mudbean/is",
+  "version": "2.0.5",
   "type": "module",
   "private": true,
-  "version": "2.0.5",
   "scripts": {
     "b": "rollup --config rollup.config.js && tsc -p tsconfig.types.json",
     "clean:package": "node scripts/clean-package-json.js",

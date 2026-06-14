@@ -33,6 +33,7 @@ for (const childrenName of srcChildrenList) {
   if (
     // 剔除测试文件
     childrenName.endsWith('.test.ts') ||
+    childrenName.endsWith('index.ts') ||
     // 剔除非导出模块
     ['testData.ts', 'types.ts', 'index.ts'].includes(childrenName)
   )
@@ -43,10 +44,6 @@ for (const childrenName of srcChildrenList) {
   const childPath = pathJoin(srcDirectory, childrenName);
 
   const childFile = fileExist(childPath); // 文件元数据
-  // 剔除主文件（主文件不添加到根导出但是需要添加到导出文件列表）
-  if (childrenName.endsWith('index.ts')) {
-    continue;
-  }
   if (!childFile) throw new RangeError(`${childrenName} 文件未能读取`);
   // 子文件是文件夹时以 index.xxx.js 为准
   if (childFile.isDirectory()) {
@@ -89,10 +86,6 @@ packageJson = {
   },
   description: 'JavaScript/TypeScript 的类型检测工具，支持 TypeScript 类型收缩',
   sideEffects: false, // 核心：开启 Tree Shaking
-  engines: {
-    // 新增：声明 Node.js 兼容版本
-    node: '>=14.0.0',
-  },
   license: 'MIT',
   files: [cjsPrefix, esPrefix, 'CHANGELOG.md', 'README.md', 'LICENSE'],
   exports: {
@@ -121,6 +114,10 @@ packageJson = {
   publishConfig: {
     access: 'public',
     registry: 'https://registry.npmjs.org/',
+  },
+  engines: {
+    // 新增：声明 Node.js 兼容版本
+    node: '>=14.0.0',
   },
 };
 
