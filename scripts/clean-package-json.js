@@ -51,17 +51,25 @@ for (const childrenName of srcChildrenList) {
   // 子文件是文件夹时以 index.xxx.js 为准
   if (childFile.isDirectory()) {
     exportsList[`./${childrenBaseName}`] = {
-      default: `./${esPrefix}/${childrenName}/index.js`,
-      import: `./${esPrefix}/${childrenName}/index.js`,
-      require: `./${cjsPrefix}/${childrenName}/index.js`,
-      types: `./${dtsPrefix}/${childrenName}/index.d.ts`,
+      import: {
+        default: `./${esPrefix}/${childrenName}/index.js`,
+        types: `./${dtsPrefix}/${childrenName}/index.d.ts`,
+      },
+      require: {
+        default: `./${cjsPrefix}/${childrenName}/index.js`,
+        types: `./${dtsPrefix}/${childrenName}/index.d.ts`,
+      },
     };
   } else if (childFile.isFile()) {
     exportsList[`./${childrenBaseName}`] = {
-      default: `./${esPrefix}/${childrenBaseName}.js`,
-      import: `./${esPrefix}/${childrenBaseName}.js`,
-      require: `./${cjsPrefix}/${childrenBaseName}.js`,
-      types: `./${dtsPrefix}/${childrenBaseName}.d.ts`,
+      import: {
+        default: `./${esPrefix}/${childrenBaseName}.js`,
+        types: `./${dtsPrefix}/${childrenBaseName}.d.ts`,
+      },
+      require: {
+        default: `./${cjsPrefix}/${childrenBaseName}.js`,
+        types: `./${dtsPrefix}/${childrenBaseName}.d.ts`,
+      },
     };
   } else {
     throw new Range(`${childrenName} 文件类型不符合要求`);
@@ -89,10 +97,14 @@ packageJson = {
   files: [cjsPrefix, esPrefix, 'CHANGELOG.md', 'README.md', 'LICENSE'],
   exports: {
     '.': {
-      import: `./${esPrefix}/index.js`,
-      default: `./${esPrefix}/index.js`,
-      require: `./${cjsPrefix}/index.js`,
-      types: `./${dtsPrefix}/index.d.ts`,
+      import: {
+        require: `./${cjsPrefix}/index.js`,
+        types: `./${dtsPrefix}/index.d.ts`,
+      },
+      require: {
+        default: `./${cjsPrefix}/index.js`,
+        types: `./${dtsPrefix}/index.d.ts`,
+      },
     },
     ...exportsList,
   },
