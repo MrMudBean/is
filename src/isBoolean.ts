@@ -10,7 +10,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import { isBoolean } from '@mudbean/is';
+ * import { isBoolean } from '@vvi/is';
  *
  * console.log(isBoolean(true)); // true
  * console.log(isBoolean(false)); // true
@@ -31,7 +31,7 @@ export function isBoolean(input: any): input is boolean {
  * @example
  *
  * ```ts
- * import { isTrue } from '@mudbean/is';
+ * import { isTrue } from '@vvi/is';
  *
  * console.log(isTrue(true)); // true
  *
@@ -51,7 +51,7 @@ export function isTrue(input: any): input is true {
  * @example
  *
  * ```ts
- * import { isFalse } from '@mudbean/is';
+ * import { isFalse } from '@vvi/is';
  *
  * console.log(isFalse(false)); // true
  *

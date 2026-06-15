@@ -11,7 +11,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import { isPlainObject } from '@mudbean/is';
+ * import { isPlainObject } from '@vvi/is';
  *
  * console.log(isPlainObject({})); // true
  *
@@ -35,7 +35,7 @@ export function isPlainObject<T extends object>(input: any): input is T {
  * @example
  *
  * ```ts
- * import { isEmptyObject } from '@mudbean/is';
+ * import { isEmptyObject } from '@vvi/is';
  *
  * const a = new Object();
  *
@@ -94,14 +94,14 @@ export function isEmptyObject(input: any): input is Record<string, never> {
 }
 
 /**
- * #  检测 data 是否是  类型{@link Date}
+ * # 检测 data 是否是  类型{@link Date}
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Date` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isDate } from '@mudbean/is';
+ * import { isDate } from '@vvi/is';
  *
  * console.log(isDate(new Date())); // true
  * console.log(isDate(new Date(0))); // true
@@ -121,15 +121,14 @@ export function isDate(input: any): input is Date {
 }
 
 /**
- *
- * 检测 `input` 是否是 `DataView` 类型
+ * # 检测 `input` 是否是 `DataView` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `DataView` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isDataView } from '@mudbean/is';
+ * import { isDataView } from '@vvi/is';
  *
  * console.log(isDataView(new DataView(new ArrayBuffer(8)))); // true
  *
@@ -144,15 +143,14 @@ export function isDataView<T extends ArrayBufferLike = ArrayBufferLike>(
 }
 
 /**
- *
- * 检测 `input` 是否是 `Map` 类型
+ * # 检测 `input` 是否是 `Map` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `Map` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isMap } from '@mudbean/is';
+ * import { isMap } from '@vvi/is';
  *
  * console.log(isMap(new Map())); // true
  *
@@ -173,15 +171,14 @@ export function isMap<K extends string, V = any>(
 }
 
 /**
- *
- * 检测 `input` 是否是 `WeakMap` 类型
+ * # 检测 `input` 是否是 `WeakMap` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `WeakMap` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isWeakMap } from '@mudbean/is';
+ * import { isWeakMap } from '@vvi/is';
  *
  * console.log(isWeakMap(new WeakMap())); // true
  *

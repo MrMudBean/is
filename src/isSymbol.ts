@@ -11,7 +11,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import { isSymbol } from '@mudbean/is';
+ * import { isSymbol } from '@vvi/is';
  *
  * console.log(isSymbol(Symbol('test'))); // true
  *

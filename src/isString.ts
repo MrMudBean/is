@@ -11,7 +11,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import { isString } from '@mudbean/is';
+ * import { isString } from '@vvi/is';
  *
  * console.log(isString('hello')); // true
  *
@@ -35,7 +35,7 @@ export function isString(input: any): input is string {
  * @example
  *
  * ```ts
- * import { isRegExp } from '@mudbean/is';
+ * import { isRegExp } from '@vvi/is';
  *
  * console.log(isRegExp(/abc/)); // true
  * console.log(isRegExp(new RegExp('abc'))); // true
@@ -61,7 +61,7 @@ export function isRegExp(input: any): input is RegExp {
  * @example
  *
  * ```ts
- * import { isEmptyString } from '@mudbean/is';
+ * import { isEmptyString } from '@vvi/is';
  *
  * console.log(isEmptyString('')); // true
  * const.log(isEmptyString(new String())); // true
@@ -93,7 +93,7 @@ export function isEmptyString(input: any): input is '' {
  * @example
  *
  * ```ts
- * import { isBusinessEmptyString } from '@mudbean/is';
+ * import { isBusinessEmptyString } from '@vvi/is';
  *
  * console.log(isBusinessEmptyString('')); // true
  * console.log(isBusinessEmptyString(' ')); // true

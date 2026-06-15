@@ -11,7 +11,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import  { isArray } from '@mudbean/is';
+ * import  { isArray } from '@vvi/is';
  *
  * console.log(isArray([1,2,3])) // true
  * console.log(isArray({})) // false
@@ -30,7 +30,7 @@ export function isArray<T = any>(input: any): input is Array<T> {
  * @example
  *
  * ```ts
- * import  { isEmptyArray } from '@mudbean/is';
+ * import  { isEmptyArray } from '@vvi/is';
  *
  * console.log(isEmptyArray([])) // true
  *
@@ -54,7 +54,7 @@ export function isEmptyArray(input: any[]): boolean {
  * @example
  *
  * ```ts
- * import  { isSet } from '@mudbean/is';
+ * import  { isSet } from '@vvi/is';
  *
  * console.log(isSet(new Set())) // true
  * console.log(isSet({})) // false
@@ -73,7 +73,7 @@ export function isSet<T = any>(input: any): input is Set<T> {
  * @example
  *
  * ```ts
- * import  { isWeakSet } from '@mudbean/is';
+ * import  { isWeakSet } from '@vvi/is';
  *
  * console.log(isWeakSet(new WeakSet())) // true
  *
@@ -94,7 +94,7 @@ export function isWeakSet<T extends WeakKey>(input: any): input is WeakSet<T> {
  * @example
  *
  * ```ts
- * import  { isBigInt64Array } from '@mudbean/is';
+ * import  { isBigInt64Array } from '@vvi/is';
  *
  * console.log(isBigInt64Array(new BigInt64Array())) // true
  *
@@ -117,7 +117,7 @@ export function isBigInt64Array<
  * @example
  *
  * ```ts
- * import  { isBigUint64Array } from '@mudbean/is';
+ * import  { isBigUint64Array } from '@vvi/is';
  *
  * console.log(isBigUint64Array(new BigUint64Array())) // true
  *
@@ -140,7 +140,7 @@ export function isBigUint64Array<T extends ArrayBufferLike = ArrayBufferLike>(
  * @example
  *
  * ```ts
- * import  { isArrayBuffer } from '@mudbean/is';
+ * import  { isArrayBuffer } from '@vvi/is';
  *
  * console.log(isArrayBuffer(new ArrayBuffer(8))) // true
  *
@@ -158,7 +158,7 @@ export function isArrayBuffer(input: any): input is ArrayBuffer {
  * @example
  *
  * ```ts
- * import  { isInt8Array } from '@mudbean/is';
+ * import  { isInt8Array } from '@vvi/is';
  *
  * console.log(isInt8Array(new Int8Array())) // true
  *
@@ -181,7 +181,7 @@ export function isInt8Array<
  * @example
  *
  * ```ts
- * import  { isUint8Array } from '@mudbean/is';
+ * import  { isUint8Array } from '@vvi/is';
  *
  * console.log(isUint8Array(new Uint8Array())) // true
  *
@@ -204,7 +204,7 @@ export function isUint8Array<
  * @example
  *
  * ```ts
- * import  { isInt16Array } from '@mudbean/is';
+ * import  { isInt16Array } from '@vvi/is';
  *
  * console.log(isInt16Array(new Int16Array())) // true
  *
@@ -227,7 +227,7 @@ export function isInt16Array<
  *
  * ```ts
  *
- * import  { isUint16Array } from '@mudbean/is';
+ * import  { isUint16Array } from '@vvi/is';
  *
  * console.log(isUint16Array(new Uint16Array())) // true
  *
@@ -250,7 +250,7 @@ export function isUint16Array<
  * @example
  *
  * ```ts
- * import  { isUint32Array } from '@mudbean/is';
+ * import  { isUint32Array } from '@vvi/is';
  *
  * console.log(isUint32Array(new Uint32Array())) // true
  *
@@ -273,7 +273,7 @@ export function isUint32Array<
  * @example
  *
  * ```ts
- * import  { isFloat32Array } from '@mudbean/is';
+ * import  { isFloat32Array } from '@vvi/is';
  *
  * console.log(isFloat32Array(new Float32Array())) // true
  *
@@ -296,7 +296,7 @@ export function isFloat32Array<
  * @example
  *
  * ```ts
- * import  { isFloat64Array } from '@mudbean/is';
+ * import  { isFloat64Array } from '@vvi/is';
  *
  * console.log(isFloat64Array(new Float64Array())) // true
  *
@@ -319,7 +319,7 @@ export function isFloat64Array<
  * @example
  *
  * ```ts
- * import  { isSharedArrayBuffer } from '@mudbean/is';
+ * import  { isSharedArrayBuffer } from '@vvi/is';
  *
  * console.log(isSharedArrayBuffer(new SharedArrayBuffer(8))) // true
  *
@@ -338,7 +338,7 @@ export function isSharedArrayBuffer(input: any): input is SharedArrayBuffer {
  * @example
  *
  * ```ts
- * import  { isUint8ClampedArray } from '@mudbean/is';
+ * import  { isUint8ClampedArray } from '@vvi/is';
  *
  * console.log(isUint8ClampedArray(new Uint8ClampedArray())) // true
  *

@@ -65,3 +65,4 @@ else
     exit 1
 fi
 
+npm publish --access public --no-git-checks

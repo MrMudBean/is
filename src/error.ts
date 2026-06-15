@@ -11,7 +11,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import { isError } from '@mudbean/is';
+ * import { isError } from '@vvi/is';
  *
  * console.log(isError(new Error('test'))); // true
  *
@@ -38,7 +38,7 @@ export function isError(input: any): input is Error {
  * @example
  *
  * ```ts
- * import  { isEvalError } from '@mudbean/is';
+ * import  { isEvalError } from '@vvi/is';
  *
  * console.log(isEvalError(new EvalError('test'))); // true
  *
@@ -65,7 +65,7 @@ export function isEvalError(input: any): input is EvalError {
  * @example
  *
  * ```ts
- * import { isRangeError } from '@mudbean/is';
+ * import { isRangeError } from '@vvi/is';
  *
  * console.log(isRangeError(new RangeError('test'))); // true
  *
@@ -92,7 +92,7 @@ export function isRangeError(input: any): input is RangeError {
  * @example
  *
  * ```ts
- * import { isReferenceError } from '@mudbean/is';
+ * import { isReferenceError } from '@vvi/is';
  *
  * console.log(isReferenceError(new ReferenceError('test'))); // true
  *
@@ -119,7 +119,7 @@ export function isReferenceError(input: any): input is ReferenceError {
  * @example
  *
  * ```ts
- * import { isSyntaxError } from '@mudbean/is';
+ * import { isSyntaxError } from '@vvi/is';
  *
  * console.log(isSyntaxError(new SyntaxError('test'))); // true
  *
@@ -146,7 +146,7 @@ export function isSyntaxError(input: any): input is SyntaxError {
  * @example
  *
  * ```ts
- * import { isTypeError } from '@mudbean/is';
+ * import { isTypeError } from '@vvi/is';
  *
  * console.log(isTypeError(new TypeError('test'))); // true
  *
@@ -175,7 +175,7 @@ export function isTypeError(input: any): input is TypeError {
  * @example
  *
  * ```ts
- * import { isURIError } from '@mudbean/is';
+ * import { isURIError } from '@vvi/is';
  *
  * console.log(isURIError(new URIError('test'))); // true
  *
@@ -194,7 +194,7 @@ export function isURIError(input: any): input is URIError {
  * @example
  *
  * ```ts
- * import { isAggregateError } from '@mudbean/is';
+ * import { isAggregateError } from '@vvi/is';
  *
  * console.log(isAggregateError(new AggregateError([]))); // true
  *

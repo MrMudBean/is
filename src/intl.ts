@@ -12,7 +12,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import { isIntlCollator } from '@mudbean/is';
+ * import { isIntlCollator } from '@vvi/is';
  *
  * console.log(isIntlCollator(new Intl.Collator())); // true
  *
@@ -32,7 +32,7 @@ export function isIntlCollator(input: any): input is Intl.Collator {
  * @example
  *
  * ```ts
- * import { isIntlDateTimeFormat } from '@mudbean/is';
+ * import { isIntlDateTimeFormat } from '@vvi/is';
  *
  * console.log(isIntlDateTimeFormat(new Intl.DateTimeFormat())); // true
  *
@@ -53,7 +53,7 @@ export function isIntlDateTimeFormat(input: any): input is Intl.DateTimeFormat {
  * @example
  *
  * ```ts
- * import { isIntlDisplayNames } from '@mudbean/is';
+ * import { isIntlDisplayNames } from '@vvi/is';
  *
  * console.log(isIntlDisplayNames(new Intl.DisplayNames())); // true
  *
@@ -71,7 +71,7 @@ export function isIntlDisplayNames(input: any): input is Intl.DisplayNames {
  * @example
  *
  * ```ts
- * import { isIntlDurationFormat } from '@mudbean/is';
+ * import { isIntlDurationFormat } from '@vvi/is';
  *
  * ```
  *
@@ -89,7 +89,7 @@ export function isIntlDisplayNames(input: any): input is Intl.DisplayNames {
  * @example
  *
  * ```ts
- * import { isIntlListFormat } from '@mudbean/is';
+ * import { isIntlListFormat } from '@vvi/is';
  *
  * console.log(isIntlListFormat(new Intl.ListFormat())); // true
  *
@@ -112,7 +112,7 @@ export function isIntlListFormat(input: any): input is Intl.ListFormat {
  * @example
  *
  * ```ts
- * import { isIntlLocale } from '@mudbean/is';
+ * import { isIntlLocale } from '@vvi/is';
  *
  * console.log(isIntlLocale(new Intl.Locale())); // true
  *
@@ -132,7 +132,7 @@ export function isIntlLocale(input: any): input is Intl.Locale {
  * @example
  *
  * ```ts
- * import { isIntlNumberFormat } from '@mudbean/is';
+ * import { isIntlNumberFormat } from '@vvi/is';
  *
  * console.log(isIntlNumberFormat(new Intl.NumberFormat())); // true
  *

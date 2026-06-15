@@ -3,15 +3,14 @@
  */
 
 /**
- *
- * 检测 `input` 是否是 `null` 类型
+ * # 检测 `input` 是否是 `null` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `null` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isNull } from '@mudbean/is';
+ * import { isNull } from '@vvi/is';
  *
  * console.log(isNull(null)); // true
  *
@@ -24,15 +23,14 @@ export function isNull(input: any): input is null {
 }
 
 /**
- *
- * 检测 `input` 是否是 `undefined` 类型
+ * # 检测 `input` 是否是 `undefined` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `undefined` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isUndefined } from '@mudbean/is';
+ * import { isUndefined } from '@vvi/is';
  *
  * console.log(isUndefined(undefined)); // true
  *

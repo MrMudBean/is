@@ -16,7 +16,7 @@ import { typeOf } from './typeOf';
  * @example
  *
  * ```ts
- * import { isFunction } from '@mudbean/is';
+ * import { isFunction } from '@vvi/is';
  *
  * console.log(isFunction(() => {})); // true
  *
@@ -38,7 +38,7 @@ export function isFunction<T extends (...args: any[]) => void>(
  * @example
  *
  * ```ts
- * import { isPromise } from '@mudbean/is';
+ * import { isPromise } from '@vvi/is';
  *
  * console.log(isPromise(new Promise(() => {}))); // true
  * console.log(isPromise(() => {})); // false
@@ -55,7 +55,7 @@ export function isPromise<T>(input: any): input is Promise<T> {
  * @example
  *
  * ```ts
- * import { isAsyncFunction } from '@mudbean/is';
+ * import { isAsyncFunction } from '@vvi/is';
  *
  * console.log(isAsyncFunction(async () => {})); // true
  * console.log(isAsyncFunction(() => {})); // false
@@ -75,12 +75,11 @@ export function isAsyncFunction<T extends (...args: any[]) => void>(
  * @example
  *
  * ```ts
- * import { isGeneratorFunction } from '@mudbean/is';
+ * import { isGeneratorFunction } from '@vvi/is';
  *
  * console.log(isGeneratorFunction(function* () {})); // true
  * console.log(isGeneratorFunction(() => {})); // false
  * ```
- *
  */
 export function isGeneratorFunction(input: any): input is GeneratorFunction {
   return typeOf(input) === 'generatorfunction';
@@ -94,7 +93,7 @@ export function isGeneratorFunction(input: any): input is GeneratorFunction {
  * @example
  *
  * ```ts
- * import { isGenerator } from '@mudbean/is';
+ * import { isGenerator } from '@vvi/is';
  *
  * const log = (str) => console.log(str);
  * const foo = function* () {
@@ -111,7 +110,6 @@ export function isGeneratorFunction(input: any): input is GeneratorFunction {
  *
  * console.log(isGenerator(foo)); // false
  * console.log(isGenerator(gen)); // true
- *
  * ```
  */
 export function isGenerator(input: any): input is Generator {

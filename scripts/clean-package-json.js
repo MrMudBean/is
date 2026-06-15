@@ -101,7 +101,7 @@ packageJson = {
     },
     ...exportsList,
   },
-  keywords: ['is', 'mudbean', 'typeof', 'javascript type', '类型检测'],
+  keywords: ['is', 'mudbean', 'typeof', 'javascript type', '类型检测', 'vvi'],
   homepage: 'https://npm.lmssee.com/is',
   bugs: {
     url: 'https://github.com/MrMudBean/is/issues',

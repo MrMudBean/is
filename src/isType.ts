@@ -10,7 +10,7 @@
  * @example
  *
  * ```ts
- * import  { isType } from '@mudbean/is';
+ * import  { isType } from '@vvi/is';
  *
  * console.log(isType<number>(1)); // true
  * console.log(isType<string>('1')); // true
@@ -27,7 +27,7 @@ export function isType<T = string>(input: any): input is T;
  * @example
  *
  * ```ts
- * import  { isType } from '@mudbean/is';
+ * import  { isType } from '@vvi/is';
  *
  * console.log(isType<number>(1, true)); // true
  * console.log(isType<number>(1, () => true)); // true

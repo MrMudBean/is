@@ -1,13 +1,13 @@
 # is
 
-[![version](<https://img.shields.io/npm/v/@mudbean/is.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/@mudbean/is) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/MrMudBean/is/issues)
+[![version](<https://img.shields.io/npm/v/@vvi/is.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/@vvi/is) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/MrMudBean/is/issues)
 
 一个简单的类型判断工具
 
 ## 使用
 
 ```ts
-import { typeOf } from '@mudbean/is';
+import { typeOf } from '@vvi/is';
 
 const num = 1;
 
@@ -21,7 +21,7 @@ if (typeOf(num) === 'number') {
 ### 使用 `ts` 中的 is 类型判断来进行类型安全收缩
 
 ```ts
-import { isString, isNumber } from '@mudbean/is';
+import { isString, isNumber } from '@vvi/is';
 
 function doSomething(value: string | number) {
   if (isString(value)) {
@@ -40,7 +40,7 @@ doSomething(1); // 1.00
 vitest
 
 ```ts
-import { isType } from '@mudbean/is';
+import { isType } from '@vvi/is';
 
 interface Person {
     name: string;
@@ -131,6 +131,6 @@ function doSomething(value: string | number | boolean | ) {
 
 ## 状态
 
-此软件包是 `@mudbean` 生态系统的一部分。
+此软件包是 `MrMudBean` 生态系统的一部分。
 它使用严格的 TypeScript 编写，并通过 Rollup 构建进行验证。
 虽然单元测试较少，但 API 稳定，并在生产环境中大量使用。

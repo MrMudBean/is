@@ -10,7 +10,7 @@ import { Typeof } from './types';
  * @returns 检测数据类型的字符串表示（小写字母）
  * @example
  * ```ts
- * import  { typeOf } from '@mudbean/is';
+ * import  { typeOf } from '@vvi/is';
  *
  *  console.log(typeOf(1) === 'number'); // true
  *  console.log(typeOf('1') === 'string'); // true

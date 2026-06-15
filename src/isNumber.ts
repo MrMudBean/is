@@ -5,15 +5,14 @@
 import { typeOf } from './typeOf';
 
 /**
- *
- * 检测 `input` 是否是 `number` 类型
+ * # 检测 `input` 是否是 `number` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `number` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isNumber } from '@mudbean/is';
+ * import { isNumber } from '@vvi/is';
  *
  * isNumber(123); // true
  *
@@ -25,15 +24,14 @@ export function isNumber(input: any): input is number {
 }
 
 /**
- *
- * 检测 `input` 是否是 `BigInt` 类型
+ * # 检测 `input` 是否是 `BigInt` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `bigint` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isBigInt } from '@mudbean/is';
+ * import { isBigInt } from '@vvi/is';
  *
  * isBigInt(123n); // true
  *
@@ -47,15 +45,14 @@ export function isBigInt(input: any): input is bigint {
 }
 
 /**
- *
- * 检测 `input` 是否是 `NaN` 类型
+ * # 检测 `input` 是否是 `NaN` 类型
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 `NaN` ，且在 Typescript 中进行类型收缩
  * @example
  *
  * ```ts
- * import { isNaN } from '@mudbean/is';
+ * import { isNaN } from '@vvi/is';
  *
  * isNaN(NaN); // true
  *
@@ -66,15 +63,14 @@ export function isNaN(input: any): input is typeof NaN {
   return Number.isNaN(input);
 }
 /**
- *
- * 是否为正整数
+ * # 是否为正整数
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为正整数
  * @example
  *
  * ```ts
- * import { isPositiveInteger } from '@mudbean/is';
+ * import { isPositiveInteger } from '@vvi/is';
  *
  * isPositiveInteger(123); // true
  * isPositiveInteger(1); // true
@@ -92,15 +88,14 @@ export function isPositiveInteger(input: any): input is number {
 }
 
 /**
- *
- * 是否为负整数
+ * # 是否为负整数
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为负整数
  * @example
  *
  * ```ts
- * import { isPositiveInteger } from '@mudbean/is';
+ * import { isPositiveInteger } from '@vvi/is';
  *
  * isPositiveInteger(-123); // true
  * isPositiveInteger(-1); // true
@@ -118,15 +113,14 @@ export function isNegativeInteger(input: any): input is number {
 }
 
 /**
- *
- * 是否为正整数
+ * # 是否为正整数
  *
  * @param input - 待检测的数据，任意类型
  * @returns 返回 `true` 则说明该数据 `input` 类型为 0
  * @example
  *
  * ```ts
- * import { isZero } from '@mudbean/is';
+ * import { isZero } from '@vvi/is';
  *
  * isZero(0); // true
  *
