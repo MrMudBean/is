@@ -4,16 +4,21 @@ import {
   getDirectoryBy,
   writeJsonFileSync,
   fileExist,
-} from 'a-node-tools';
+} from '@vvi/node';
 import { readdirSync } from 'node:fs';
 import { basename, extname } from 'node:path';
 
 // 原始 package.json 内容
 let packageJson = readFileToJsonSync('./package.json');
 // 移除冗余的键
-['scripts', 'devDependencies', 'private', 'packageManager'].forEach(
-  key => delete packageJson[key],
-);
+[
+  'scripts',
+  'devDependencies',
+  'private',
+  'packageManager',
+  'type',
+  'jja',
+].forEach(key => delete packageJson[key]);
 const esPrefix = 'es'; // es 前缀
 const cjsPrefix = 'cjs'; // cjs 前缀
 const dtsPrefix = 'es'; // 类型文件的前缀
@@ -77,7 +82,7 @@ for (const childrenName of srcChildrenList) {
 packageJson = {
   ...packageJson,
   main: cjsPrefix + '/index.js', // 旧版本 CommonJs 入口
-  module: esPrefix + '/index.js', // 旧版本 ESM 入口
+  // module: esPrefix + '/index.js', // 旧版本 ESM 入口
   types: dtsPrefix + '/index.d.ts', // 旧版本类型入口
   author: {
     name: '泥豆君',
