@@ -19,7 +19,8 @@
   },
   "jja": {
     "pkg": [
-      "eslint"
+      "eslint",
+      "typescript"
     ]
   },
   "devDependencies": {
